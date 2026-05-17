@@ -179,7 +179,7 @@ async function loadVideos() {
       const safeId = encodeURIComponent(rawId);
       const title = parts[1] ? parts[1].trim() : 'Video Tanpa Judul';
       
-      let badge = "NEW";
+      let badge = "VIDEY";
       let thumbHTML = "";
 
       // 1. CEK APAKAH LINK HTTP (Video luar)
@@ -203,7 +203,7 @@ async function loadVideos() {
       } 
       // 3. VIDEEY (Pendek)
       else {
-         badge = "VIDEY";
+         badge = "NEW";
          thumbHTML = `<video src="https://cdn.videy.co/${rawId}.mp4#t=0.1" preload="metadata" muted playsinline class="thumb-vid"></video>`;
       }
 
